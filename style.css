@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border-radius: 50%;
+  border: 4px solid;
+  width: 150px;
+  cursor: pointer;
+}
+
+body {
+  background-image: url(img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  color: #fff;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+}
+
+p.info {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.choicesDiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin-block: 4rem;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.stats p {
+  font-size: 1.5rem;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.resultDiv {
+  display: none;
+  gap: 2rem;
+  margin-block: 4rem;
+}
+
+.change {
+  transform: scaleX(-1);
+}
+
+.playAgainBtn {
+  display: none;
+  margin-inline: auto;
+  border: none;
+  background-color: transparent;
+  font-family: "Lato", sans-serif;
+  font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+.screen.active {
+  display: block;
+}
+
+.left-screen.active {
+  animation: slideLeft 4s forwards;
+}
+
+.right-screen.active {
+  animation: slideRight 4s forwards;
+}
+
+.screen {
+  position: fixed;
+  background-color: #fff;
+  height: 100vh;
+  width: 50%;
+  z-index: 100;
+  display: none;
+  background-image: url(img/screen-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@keyframes slideLeft {
+  from {
+    left: 0;
+  }
+  to {
+    left: -1000px;
+  }
+}
+
+@keyframes slideRight {
+  from {
+    right: 0;
+  }
+  to {
+    right: -1000px;
+  }
+}
+
+/*  */
+.hand-animation {
+  display: none;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.hand-animation.play {
+  display: flex;
+}
+
+.leftHand-animation.play {
+  animation: upDownLeft 1s infinite;
+}
+
+.rightHand-animation.play {
+  animation: upDownRight 1s infinite;
+}
+
+.rightHand-animation img {
+  transform: scaleX(-1);
+}
+
+@keyframes upDownLeft {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px) rotate(-45deg);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes upDownRight {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px) rotate(45deg);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

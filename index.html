@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <div id="screen" class="left-screen screen"></div>
+    <div id="screen" class="right-screen screen"></div>
+
+    <div class="container">
+      <p id="info" class="info">Choose:</p>
+      <div id="choicesDiv" class="choicesDiv">
+        <div class="rockDiv">
+          <img id="rock" class="choice" src="img/rock.png" alt="" />
+        </div>
+        <div class="paperDiv">
+          <img id="paper" class="choice" src="img/paper.png" alt="" />
+        </div>
+        <div class="scissorsDiv">
+          <img id="scissors" class="choice" src="img/scissors.png" alt="" />
+        </div>
+      </div>
+
+      <div id="hand-animation" class="hand-animation">
+        <div class="leftHand-animation hand-animation">
+          <img src="img/rock.png" alt="" />
+        </div>
+        <div class="rightHand-animation hand-animation">
+          <img src="img/rock.png" alt="" />
+        </div>
+      </div>
+
+      <div id="resultDiv" class="resultDiv">
+        <div id="playerDiv" class="playerDiv">
+          <img id="playerImg" src="" alt="" />
+        </div>
+        <div id="computerDiv" class="computerDiv">
+          <img id="computerImg" src="" alt="" />
+        </div>
+      </div>
+
+      <button id="playAgainBtn" class="playAgainBtn active">Play Again</button>
+
+      <div id="stats" class="stats">
+        <div class="wonDiv">
+          <p>Won: <span id="wonEl">0</span></p>
+        </div>
+        <div class="lostDiv">
+          <p>Lost: <span id="lostEl">0</span></p>
+        </div>
+        <div class="drawDiv">
+          <p>Draw: <span id="drawEl">0</span></p>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
